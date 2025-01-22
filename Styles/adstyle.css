@@ -4,27 +4,29 @@
 }
 
 body {
-    background: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(19, 15, 64, 0.7)), 
-        url('../img/background.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
+    background-image: url(https://cdn.pixabay.com/photo/2015/12/23/17/27/abstract-1105849_1280.jpg);
+
+    /* background: linear-gradient(to right, #1C2529, #A1D1B1); */
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
-.transparent-navbar {
-    background-color: transparent !important;
+/* .transparent-navbar {
+    background-color: white
     box-shadow: none;
-}
+} */
 
 .navbar-nav .nav-link {
-    font-size: 1.2rem; 
-    font-weight: bold; 
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .navbar-brand {
-    font-size: 55px; 
+    font-size: 55px;
     padding-left: 2%;
 }
 
@@ -36,6 +38,7 @@ body {
     padding-top: 8%;
     padding-left: 20%;
 }
+
 
 .card-container {
     perspective: 1000px;
@@ -54,11 +57,16 @@ body {
     transition: transform 0.8s ease;
 }
 
+.credit-card {
+    transition: transform 0.6s ease; /* Smooth transition on the transform property */
+}
+
 .credit-card:hover {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -67,10 +75,10 @@ body {
 }
 
 .card-front {
-    background-image: url('../img/card.jpg'); 
-    opacity: 80%;
-    background-size: cover; 
-    background-position: center; 
+    /* background: linear-gradient(135deg, #1C2529 50%, #A1D1B1 50%); */
+    background-image: url(../img/card\ front.jpg);
+    background-size: cover;
+    background-position: center;
     color: white;
     display: flex;
     flex-direction: column;
@@ -83,7 +91,9 @@ body {
 .card-front .chip {
     width: 50px;
     height: 35px;
-    background-color: #ffcc00;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/10/20/60/82/1000_F_1020608219_T12kEPNNnvspHW8iul5Qs8C19vLpQiD1.jpg);
+    background-size: cover;
+    /* background-color: #ffcc00; */
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -100,7 +110,9 @@ body {
 }
 
 .card-back {
-    background-image: url('../img/card\ 2.jpg'); 
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/card\ back.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -117,7 +129,7 @@ body {
     width: 100%;
     height: 40px;
     background-color: rgb(255, 255, 255);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .card-back .cvv {
@@ -140,20 +152,26 @@ body {
     color: #555;
 }
 
+
 .btn {
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    outline: none;
-    border-radius: 0.4rem;
+    font-family: 'Ropa Sans', sans-serif;
+    /* font-family: 'Valorant', sans-serif; */
+    color: white;
     cursor: pointer;
-    text-transform: uppercase;
-    background-color: rgb(14, 14, 26);
-    color: rgb(234, 234, 234);
-    font-weight: 700;
-    transition: 0.6s;
-    box-shadow: 0px 0px 60px #1f4c65;
-    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    border: 1px solid #1C2529;
+    padding: 0.8rem 2.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-color: #1C2529;
+    background-size: 200%;
+    background-position: 200%;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    transition-property: background-position, border, color;
+    position: relative;
+    z-index: 1;
 }
 
 .btn:active {
@@ -161,101 +179,56 @@ body {
 }
 
 .btn:hover {
-    background: rgb(2,29,78);
-    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
-    color: rgb(4, 4, 38);
+    border: 1px solid #FF4655;
+    color: white;
+    background-position: 40%;
 }
 
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .modal-content {
-    background-color: rgba(255, 255, 255, 0.158);
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 500px; 
-    color: #fff;
-  }
-  
- 
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
     font-weight: bold;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-
-/* .close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-} */
-
-/* .close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-
-.close-btn {
     position: absolute;
     top: 10px;
-    right: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000; 
-    cursor: pointer;
-    background: #ffffff; 
+    right: 20px;
+}
 
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .close-btn:hover {
-    background: #f30000; 
-    color: #ffffff;
-  }
-  
-  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 
 @media (max-width: 480px) {
-  .modal-content {
-    width: 90%;
-  }
+    .modal-content {
+        width: 90%;
+    }
 }
 
 
@@ -355,6 +328,120 @@ body {
         padding-left: 5%;
     }
 }
- h4{
-    color: aqua;
- }
+
+h4 {
+    color: rgb(0, 255, 149);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    background: #ffffff;
+
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover {
+    background: #f30000;
+    color: #ffffff;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(19, 15, 64, 0.7)); */
+    background-color: rgba(255, 255, 255, 0.096);
+    color: white;
+    padding: 2em;
+    border-radius: 25px;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.modal-content .form {
+    padding: 0;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 0.7em 1.5em;
+    }
+
+    .form-check-label {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 60%;
+        padding: 1.8em;
+    }
+
+    .form-group input {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 0.8em 1.7em;
+    }
+
+    .form-check-label {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .modal-content {
+        width: 40%;
+        padding: 2em;
+    }
+}
