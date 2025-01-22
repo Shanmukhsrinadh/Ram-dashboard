@@ -15,30 +15,38 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark transparent-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1c25293d;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <span style="color: #5ee07a;">B</span><span style="color: #2C7744;">ank</span>
+          <div class="logo" style="display: flex;">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+              <img src="img/R_Logo-Photoroom__1_-removebg-preview.png" alt="Bank Logo" 
+                   style="height: 100px; width: auto; background-size: cover;">
+              <span style="color: #5ee07a; padding-bottom: 20%;">B</span>
+              <span style="color: #2C7744; padding-bottom: 20%;">ank</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active nav-text" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-text" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-text" href="#">Pricing</a>
-                    </li>
-                </ul>
-            </div>
+          </div> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link nav-text" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-text" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-text" href="#">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-text" href="#">Create an account</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
     <center>
         <h1 style="position: relative; display: inline-block; color: rgb(27, 235, 155);">
             Account Details
@@ -54,7 +62,7 @@
             <div class="credit-card">
                 <div class="card-front">
                     <div class="chip"></div>
-                    <div class="card-number" style="color: #A1D1B1;">1234 5678 98 <span style="color: #1C2529;">76 5432</span></div>
+                    <div class="card-number" style="color: #ffffff;">1234 5678 9876 5432</span></div>
                     <div class="card-holder" style="color:#A1D1B1 ;">Bank Name</div>
                 </div>
                 <div class="card-back">
@@ -63,59 +71,54 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col">
-                    <div class="row text-start">
-
-                        <div class="col-sm">
-                            <h4>Account Holder Name</h4>
-                            <h4></h4>
-                        </div>
-                        <div class="col-sm" style="color: white;">
-                            <p id="acname">Account Holder Name</p>
-                        </div>
-                    </div>
-                    <div class="row text-start">
-                        <div class="col-sm">
-                            <h4>Account Number</h4>
-                            <h4></h4>
-                        </div>
-                        <div class="col-sm" style="color: white;">
-                            <p id="acnum">123456789</p>
-                        </div>
-                    </div>
-                    <div class="row text-start">
-                        <div class="col-sm">
-                            <h4>Account Type</h4>
-                            <h4></h4>
-                        </div>
-                        <div class="col-sm" style="color: white;">
-                            <p>Savings/Current</p>
-                        </div>
-                    </div>
-                    <div class="row text-start">
-                        <div class="col-sm">
-                            <h4>Branch Name</h4>
-                            <h4></h4>
-                        </div>
-                        <div class="col-sm" style="color: white;">
-                            <p>India</p>
-                        </div>
-                    </div>
-                    <div class="row text-start">
-                        <div class="col-sm">
-                            <h4>Available Balance</h4>
-                            <h4></h4>
-                        </div>
-                        <div class="col-sm" style="color: white;">
-                            <p id="Avlbal">1000</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       <div class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col">
+      <div class="row text-start">
+        <div class="col-sm">
+          <h4>Account Holder Name:</h4>
         </div>
+        <div class="col-sm" style="color: white;">
+          <p id="acname">Account Holder Name</p>
+        </div>
+      </div>
+      <div class="row text-start">
+        <div class="col-sm">
+          <h4>Account Number:</h4>
+        </div>
+        <div class="col-sm" style="color: white;">
+          <p id="acnum">123456789</p>
+        </div>
+      </div>
+      <div class="row text-start">
+        <div class="col-sm">
+          <h4>Account Type:</h4>
+        </div>
+        <div class="col-sm" style="color: white;">
+          <p>Savings/Current</p>
+        </div>
+      </div>
+      <div class="row text-start">
+        <div class="col-sm">
+          <h4>Branch Name:</h4>
+        </div>
+        <div class="col-sm" style="color: white;">
+          <p>India</p>
+        </div>
+      </div>
+      <div class="row text-start">
+        <div class="col-sm">
+          <h4>Available Balance:</h4>
+        </div>
+        <div class="col-sm" style="color: white;">
+          <p id="Avlbal">1000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -133,7 +136,7 @@
           <form>
             <div class="form-group">
               <label>Account Number</label>
-              <input type="number" class="form-control" id="creditAmount" placeholder="Enter your account number">
+              <input type="number" class="form-control" id="debitAmount" value="123456789" disabled style="background-color: #5ee07a;">
               <label>Amount</label>
               <input type="number" class="form-control" id="creditAmount" placeholder="Enter the amount to be credited">
               <label>4-digit pin number</label>
@@ -150,7 +153,7 @@
           <form>
             <div class="form-group">
               <label>Account Numaber</label>
-              <input type="number" class="form-control " id="debitAmount" placeholder="Enter account number">
+              <input type="number" class="form-control" id="debitAmount" value="123456789" disabled style="background-color: #5ee07a;">
               <label>Amount</label>
               <input type="number" class="form-control " id="debitAmount" placeholder="Enter the amount to be debited">
               <label>4-digit pin number</label>
